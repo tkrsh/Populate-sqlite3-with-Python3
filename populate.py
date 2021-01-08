@@ -13,7 +13,7 @@ def get_cursor(file, table):
         cur = con.cursor()
         cur.execute("SELECT * FROM {}".format(table))
         print("Successfully Connected to Databse", file)
-        return cursor, con
+        return cur, con
     except SystemError:
         print("Connection Failed")
     return cur, con
