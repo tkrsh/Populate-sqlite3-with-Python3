@@ -12,3 +12,10 @@ Iterating over and creating sqlite3 databases with help of python3
     - Updae your file locations and columns which you need to fill in the db
     
     - run the script ! thats it!
+ 
+ 
+### TO DO 
+
+ 1) Improve usablity of populate.py
+ 
+ 2) Add Suppport for JSON
