@@ -7,9 +7,9 @@ Iterating over and creating sqlite3 databases with help of python3
 
  1)  Made script to automate the process of filling data in sqlite3 databases  
   
+     in populate.py
      
-     
-     ex-> Fill in the columns that you want as a field in your dataset <u>*df = df[['columns']]*</u> and <u>*num_columns*</u> with total columns then run the script as:
+     Fill in the columns that you want as a field in your dataset  *df = df[['columns']]*  and  *num_columns*  with total columns then run the script as:
 
      python3 populate.py /path/to/example.csv /path/to/example.sqlite3
 
