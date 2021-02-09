@@ -5,17 +5,16 @@ Iterating over and creating sqlite3 databases with help of python3
 
 ## Added Support For auto population of sqlite3 database from CSV data
 
- 1)  Made script to automate the process of filling data in sqlite3 databases useful for Django workflows
- 
-    - Limited support to CSV datasets
-    
-    - Updae your file locations and columns which you need to fill in the db
-    
-    - run the script ! thats it!
+ 1)  Made script to automate the process of filling data in sqlite3 databases  
+  
+     
+     
+     ex-> Fill in the columns that you want as a field in your dataset df = df[['columns']] and num_columns and run the script as
+
+     python3 populate.py /path/to/example.csv /path/to/example.sqlite3
+
  
  
 ### TO DO 
 
- 1) Improve usablity of populate.py
- 
- 2) Add Suppport for JSON
+ 1) Add support for JSON
