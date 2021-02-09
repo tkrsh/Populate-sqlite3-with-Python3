@@ -3,6 +3,8 @@ sqlite3 for read/write operations on the db
 """
 import sqlite3
 import pandas as pd
+import sys 
+
 
 def get_cursor(file, table):
     """
@@ -40,18 +42,20 @@ def write_data(cur, inp_data, inc_connection):
     """
     Perform insertion takes cursor and and prints status.
     """
-    action = '''insert into {} values ({})'''.format(TABLE, ("?," * 9)[:-1])
+    num_columns= ''
+    action = '''insert into {} values ({})'''.format(TABLE, ("?," * num_columns)[:-1])
     for i in inp_data:
         cur.execute(action, i)
     inc_connection.commit()
 
 
 if __name__ == "__main__":
-    df = pd.read_csv("codeforces.csv")
-    df = df[['Unnamed: 0', 'username', 'rating_codeforces', 'name', 'city',
-             'country', 'organization', 'rank_codeforces', 'leaderboard_rank']]
-    FILE = '/home/tkrsh/Desktop/db.sqlite3'
-    TABLE = 'main_ratings'
+    args=sys.argv[1:]
+    df = pd.read_csv(args[1])
+    db = arg[2]
+    df = df[['columns']]
+    FILE = '' # Database File
+    TABLE = '' #Table Name
     try:
         cursor, connection = get_cursor(FILE, TABLE)
         print_status(cursor)
